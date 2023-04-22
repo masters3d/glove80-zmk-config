@@ -165,53 +165,94 @@
     keymap {
         compatible = "zmk,keymap";
 
-default_layer {
+layer0_default {
 bindings = <
 &kp F1              &kp F2                  &kp F3                  &kp F4          &kp F5                                                                                                                                                                         &kp F6     &kp F7    &kp F8                 &kp F9                  &kp F10
 &kp LS(LG(S))       &morph_quote_single     &morph_quote_double     &kp MINUS       &kp EQUAL   &kp SLASH                                                                                                                               &morph_exclamation         &kp LBKT   &kp RBKT  &morph_parens_left     &morph_parens_right     &kp MINUS
 &kp LC(LA(DEL))     &kp V                   &kp W                   &kp D           &kp L       &mo_key LAYER_CMD Q                                                                                                                     &kp Z                      &kp U      &kp O     &kp Y                  &kp B                   &none
 &kp ESC             &kp N                   &kp S                   &kp T           &kp R       &morph_comma                                                                                                                            &morph_dot                 &kp A      &kp E     &kp I                  &kp C                   &kp ENTER
 &none               &kp P                   &kp F                   &kp M           &kp H       &kp SEMICOLON             &mo 6     &kp LEFT_WIN    &kp LEFT_CONTROL                 &kp ESCAPE      &kp TAB            &mo 6           &kp COLON                  &kp K      &kp J     &kp X                  &kp G                   &none
-&none               &kp HOME                &kp PAGE_DOWN           &kp PAGE_UP     &kp END                               &kp BSPC  &kp LEFT_SHIFT  &kp LEFT_ALT                     &mo LAYER_CMD   &kp RIGHT_SHIFT    &kp SPACE                                  &kp LEFT   &kp DOWN  &kp UP                 &kp RIGHT               &none
+&magic 8 0          &kp HOME                &kp PAGE_DOWN           &kp PAGE_UP     &kp END                               &kp BSPC  &kp LEFT_SHIFT  &kp LEFT_ALT                     &mo LAYER_CMD   &kp RIGHT_SHIFT    &kp SPACE                                  &kp LEFT   &kp DOWN  &kp UP                 &kp RIGHT               &none
 >;
 };
-layer_qwerty {
+layer1_qwerty {
 bindings = <
-&kp F1      &kp F2      &kp F3      &kp F4      &kp F5                                                                                              &kp F6  &kp F7      &kp F8      &kp F9      &kp F10
-&kp EQUAL   &kp N1      &kp N2      &kp N3      &kp N4      &kp N5                                                                          &kp N6  &kp N7  &kp N8      &kp N9      &kp N0      &kp MINUS
-&kp TAB     &kp Q       &kp W       &kp E       &kp R       &kp T                                                                           &kp Y   &kp U   &kp I       &kp O       &kp P       &kp BSLH
-&kp ESC     &kp A       &kp S       &kp D       &kp F       &kp G                                                                           &kp H   &kp J   &kp K       &kp L       &kp SEMI    &kp SQT
-&kp GRAVE   &kp Z       &kp X       &kp C       &kp V       &kp B   &kp LSHFT   &kp LCTRL   &lower      &kp LGUI    &kp RCTRL   &kp RSHFT   &kp N   &kp M   &kp COMMA   &kp DOT     &kp FSLH    &kp PG_UP
-&magic 2 0  &kp HOME    &kp END     &kp LEFT    &kp RIGHT           &kp BSPC    &kp DEL     &kp LALT    &kp RALT    &kp RET     &kp SPACE           &kp UP  &kp DOWN    &kp LBKT    &kp RBKT    &kp PG_DN
+&trans  &trans  &trans  &trans  &trans                                                             &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans                                                             &trans  &trans  &trans  &trans  &trans
+&trans  &kp Q       &kp W       &kp E       &kp R       &kp T                                                                           &kp Y   &kp U   &kp I       &kp O       &kp P           &trans
+&trans  &kp A       &kp S       &kp D       &kp F       &kp G                                                                           &kp H   &kp J   &kp K       &kp L       &morph_dot      &trans
+&trans  &kp Z       &kp X       &kp C       &kp V       &kp B   &trans &trans &trans &trans &trans &trans                               &kp N   &kp M   &kp COMMA   &kp DOT     &morph_comma    &trans
+&trans  &trans  &trans  &trans  &trans                              &trans &trans &trans &trans &trans &trans          &trans  &trans  &trans  &trans  &trans
 >;
 };
 
-
-layer_padding1 {
+layer2_padding {
 bindings = <
-&trans  &trans  &trans  &trans  &trans                                                                                           &trans  &trans  &trans  &trans   &trans
-&trans  &trans  &trans  &trans  &trans   &kp N5                                                                          &kp N6  &trans  &trans  &trans  &trans   &trans
-&trans  &trans  &trans  &trans  &trans   &kp T                                                                           &kp Y   &trans  &trans  &trans  &trans   &trans
-&trans  &trans  &trans  &trans  &trans   &kp G                                                                           &kp H   &trans  &trans  &trans  &trans   &trans
-&trans  &trans  &trans  &trans  &trans   &kp B   &kp LSHFT   &kp LCTRL   &lower      &kp LGUI    &kp RCTRL   &kp RSHFT   &kp N   &trans  &trans  &trans  &trans   &trans
-&trans  &trans  &trans  &trans  &trans           &kp BSPC    &kp DEL     &kp LALT    &kp RALT    &kp RET     &kp SPACE           &trans  &trans  &trans  &trans   &trans
+&trans  &trans  &trans  &trans  &trans                                                             &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans                                             &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans                                             &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans                                             &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans &trans &trans &trans &trans &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans          &trans &trans &trans &trans &trans &trans          &trans  &trans  &trans  &trans  &trans
 >;
 };
 
+layer3_padding {
+bindings = <
+&trans  &trans  &trans  &trans  &trans                                                             &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans                                             &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans                                             &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans                                             &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans &trans &trans &trans &trans &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans          &trans &trans &trans &trans &trans &trans          &trans  &trans  &trans  &trans  &trans
+>;
+};
 
+layer4_padding {
+bindings = <
+&trans  &trans  &trans  &trans  &trans                                                             &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans                                             &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans                                             &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans                                             &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans &trans &trans &trans &trans &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans          &trans &trans &trans &trans &trans &trans          &trans  &trans  &trans  &trans  &trans
+>;
+};
 
-        layer_Lower {
+        layer5_Lower {
             bindings = <
  &kp C_BRI_DN  &kp C_BRI_UP      &kp C_PREV      &kp C_NEXT         &kp C_PP                                                                                    &kp C_MUTE  &kp C_VOL_DN  &kp C_VOL_UP            &none  &kp PAUSE_BREAK
        &trans         &none           &none           &none            &none   &kp HOME                                                   &kp LEFT_PARENTHESIS  &kp KP_NUM  &kp KP_EQUAL  &kp KP_SLASH  &kp KP_MULTIPLY  &kp PRINTSCREEN
        &trans         &none           &none    &kp UP_ARROW            &none    &kp END                                                  &kp RIGHT_PARENTHESIS   &kp KP_N7     &kp KP_N8     &kp KP_N9     &kp KP_MINUS   &kp SCROLLLOCK
        &trans         &none  &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW  &kp PG_UP                                                            &kp PERCENT   &kp KP_N4     &kp KP_N5     &kp KP_N6      &kp KP_PLUS            &none
        &trans     &kp K_APP           &none         &kp F11          &kp F12  &kp PG_DN  &trans  &trans   &to 0  &trans  &trans  &trans              &kp COMMA   &kp KP_N1     &kp KP_N2     &kp KP_N3     &kp KP_ENTER           &trans
-   &magic 2 0      &kp CAPS         &kp INS         &kp F11          &kp F12             &trans  &trans  &trans  &trans  &trans  &trans                          &kp KP_N0     &kp KP_N0    &kp KP_DOT     &kp KP_ENTER           &trans
+   &magic 8 0      &kp CAPS         &kp INS         &kp F11          &kp F12             &trans  &trans  &trans  &trans  &trans  &trans                          &kp KP_N0     &kp KP_N0    &kp KP_DOT     &kp KP_ENTER           &trans
             >;
         };
 
-        layer_Magic {
+layer6_keypad {
+bindings = <
+&trans  &trans  &trans  &trans  &trans                                                             &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans                                             &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans                                             &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans                                             &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans &trans &trans &trans &trans &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans          &trans &trans &trans &trans &trans &trans          &trans  &trans  &trans  &trans  &trans
+>;
+};
+
+layer7_fn {
+bindings = <
+&trans  &trans  &trans  &trans  &trans                                                             &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans                                             &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans                                             &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans                                             &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans &trans &trans &trans &trans &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans          &trans &trans &trans &trans &trans &trans          &trans  &trans  &trans  &trans  &trans
+>;
+};
+
+        layer8_Magic {
             bindings = <
   &bt BT_CLR            &none            &none            &none            &none                                                                                  &none   &none   &none   &none  &bt BT_CLR_ALL
        &none            &none            &none            &none            &none            &none                                                         &none   &none   &none   &none   &none           &none
