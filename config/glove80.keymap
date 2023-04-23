@@ -103,6 +103,16 @@
 
     /* Custom Defined Behaviors */
 
+   mo_key: behavior_mo_key {
+        compatible = "zmk,behavior-hold-tap";
+        label = "mo_key";
+        #binding-cells = <2>;
+        tapping-term-ms = <200>;
+        quick_tap_ms = <175>;
+        flavor = "tap-preferred";
+        bindings = <&mo>, <&kp>;
+    };
+
     // &dot_override,
     morph_dot: morph_dot {
         compatible = "zmk,behavior-mod-morph";
