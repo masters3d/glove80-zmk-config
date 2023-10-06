@@ -217,8 +217,8 @@ bindings = <
 &kp LC(LA(DEL))     &morph_quote_single     &morph_quote_double     &kp MINUS       &kp EQUAL   &kp SLASH                                                                                                                      &morph_exclamation         &kp LBKT   &kp RBKT  &morph_parens_left     &morph_parens_right     &kp MINUS
 &kp X               &kp Q                   &kp P                   &kp L           &kp C       &kp G                                                                                                                          &kp Z                      &kp U      &kp O     &kp Y                  &kp K                   &kp J
 &kp ESC             &kp R                   &kp N                   &kp T           &kp S       &kp F                                                                                                                          &morph_dot                 &kp H      &kp E     &kp I                  &kp A                   &kp ENTER
-&to 1               &kp V                   &kp B                   &kp M           &kp D       &kp W                     &mo 6     &kp LEFT_WIN    &kp LEFT_CONTROL        &kp TAB        &kp ESCAPE            &mo 6         &morph_comma               &kp LEFT   &kp DOWN  &kp UP                 &kp RIGHT               &to 0
-&magic 8 0          &kp HOME                &kp PAGE_DOWN           &kp PAGE_UP     &kp END                               &kp BSPC  &kp LEFT_SHIFT  &kp LEFT_ALT            &mo 7          &kp RIGHT_SHIFT       &kp SPACE                                &kp LEFT   &kp DOWN  &kp UP                 &kp RIGHT               &magic 8 0
+&to 1               &kp V                   &kp B                   &kp M           &kp D       &kp W                &kp LEFT_SHIFT     &kp LEFT_WIN    &kp LEFT_CONTROL    &kp TAB    &kp ESCAPE   &kp RIGHT_SHIFT            &morph_comma               &kp LEFT   &kp DOWN  &kp UP                 &kp RIGHT               &to 0
+&magic 8 0          &kp HOME                &kp PAGE_DOWN           &mo 5           &mo 6                            &kp BSPC  &kp LEFT_SHIFT  &kp LEFT_ALT       &mo 7          &kp RIGHT_SHIFT       &kp SPACE                                          &kp LEFT   &kp DOWN  &kp UP                 &kp RIGHT               &magic 8 0
 >;
 };
 layer1_qwerty {
@@ -254,18 +254,7 @@ bindings = <
 >;
 };
 
-layer4_padding {
-bindings = <
-&trans  &trans  &trans  &trans  &trans                                                             &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans                                             &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans                                             &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans                                             &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &trans &trans &trans &trans &trans &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans          &trans &trans &trans &trans &trans &trans          &trans  &trans  &trans  &trans  &trans
->;
-};
-
-        layer5_Lower {
+layer4_Lower {
             bindings = <
  &kp C_BRI_DN  &kp C_BRI_UP      &kp C_PREV      &kp C_NEXT         &kp C_PP                                                                                    &kp C_MUTE  &kp C_VOL_DN  &kp C_VOL_UP            &none  &kp PAUSE_BREAK
        &trans         &none           &none           &none            &none   &kp HOME                                                   &kp LEFT_PARENTHESIS  &kp KP_NUM  &kp KP_EQUAL  &kp KP_SLASH  &kp KP_MULTIPLY  &kp PRINTSCREEN
@@ -275,6 +264,18 @@ bindings = <
    &magic 8 0      &kp CAPS         &kp INS         &kp F11          &kp F12             &trans  &trans  &trans  &trans  &trans  &trans                          &kp KP_N0     &kp KP_N0    &kp KP_DOT     &kp KP_ENTER           &trans
             >;
         };
+
+layer5_keypad_symbol {
+bindings = <
+&trans  &trans  &trans  &trans  &trans                                                             &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans                                             &trans  &kp PERCENT  &kp CARET  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans                                             &trans  &kp DOLLAR   &kp AMPERSAND  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans                                             &trans  &kp POUND    &kp STAR  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans &trans &trans &trans &trans &trans  &trans  &kp AT_SIGN  &kp PIPE  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans          &trans &trans &trans &trans &trans &trans          &trans  &trans  &trans  &trans  &trans
+>;
+};
+
 
 layer6_keypad {
 bindings = <
