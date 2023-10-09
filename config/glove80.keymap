@@ -117,11 +117,22 @@
         compatible = "zmk,behavior-hold-tap";
         label = "HOMEROW_MODS";
         #binding-cells = <2>;
-        tapping-term-ms = <100>;
+        tapping-term-ms = <130>;
         quick-tap-ms = <0>;
         flavor = "tap-preferred";
         bindings = <&kp>, <&kp>;
     };
+
+    shift_mod: shift_hold_tap {
+        compatible = "zmk,behavior-hold-tap";
+        label = "shift_mod_HOLD_TAP";
+        #binding-cells = <2>;
+        flavor = "tap-unless-interrupted";
+        tapping-term-ms = <100>;                        // <---[[produces tap if held longer than tapping-term-ms]]
+        quick-tap-ms = <200>;
+        bindings = <&kp>, <&kp>;
+    };
+
 
     // &dot_override,
     morph_dot: morph_dot {
@@ -228,7 +239,7 @@ bindings = <
 &kp ESC             &kp V                   &kp P                   &kp L           &kp C       &kp W                                                                                                                          &kp GRAVE                  &kp U      &kp O     &kp Y                  &kp Z                   &kp DEL
 &kp TAB             &kp R                   &kp N                   &kp T           &kp S       &kp F                                                                                                                          &morph_comma               &kp A      &kp E     &kp I                  &morph_dot              &kp ENTER
 &to 1               &kp Q                   &kp B                   &kp M           &kp D       &kp G                &hr_mod LEFT_SHIFT BSPC     &kp LEFT_WIN    &kp LEFT_CONTROL    &kp TAB    &kp ESCAPE   &kp RIGHT_SHIFT       &kp SEMICOLON              &kp K      &kp J     &kp X                  &kp COLON               &to 0
-&magic 8 0          &kp LEFT_WIN            &kp LEFT_ALT            &mo 5           &mo 6                            &kp S  &none  &none                    &mo 7          &kp H       &kp SPACE                                                          &kp LEFT   &kp DOWN  &kp UP                 &kp RIGHT               &magic 8 0
+&magic 8 0          &kp LEFT_WIN            &kp LEFT_ALT            &mo 5           &mo 6                            &kp BSPC  &shift_mod LEFT_SHIFT BSPC &none                    &mo 7          &kp H       &kp SPACE                                                          &kp LEFT   &kp DOWN  &kp UP                 &kp RIGHT               &magic 8 0
 >;
 };
 layer1_qwerty {
