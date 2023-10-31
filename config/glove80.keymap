@@ -247,8 +247,8 @@ bindings = <
 &kp LC(LA(DEL))     &morph_quote_single     &morph_quote_double     &kp MINUS       &kp EQUAL   &kp SLASH                                                                                                                      &morph_exclamation         &kp LBKT   &kp RBKT  &morph_parens_left     &morph_parens_right     &kp MINUS
 &kp ESC             &kp SEMICOLON           &kp P                   &kp L           &kp C       &kp W                                                                                                                          &kp Z                      &kp U      &kp O     &kp Y                  &kp COLON               &kp DEL
 &kp BSPC            &kp R                   &kp N                   &kp T           &kp S       &kp F                                                                                                                          &morph_dot                 &kp A      &kp E     &kp I                  &kp H                   &kp ENTER
-&to 1               &kp V                   &kp B                   &kp M           &kp D       &kp G                &kp LEFT_SHIFT   &kp LEFT_WIN    &kp LEFT_CONTROL    &kp TAB    &kp ESCAPE   &kp RIGHT_SHIFT              &morph_comma               &kp K      &kp J     &kp X                  &kp Q                   &to 0
-&magic 8 0          &kp LEFT_WIN            &kp LEFT_ALT            &mo 5           &mo 6                            &trans      &kp LEFT_SHIFT &kp LEFT_ALT                &mo 7          &kp RIGHT_SHIFT        &kp SPACE                                                          &kp LEFT   &kp DOWN  &kp UP                 &kp RIGHT               &magic 8 0
+&kp LA(BSPC)        &kp V                   &kp B                   &kp M           &kp D       &kp G                &kp LEFT_ALT   &kp LEFT_WIN    &kp LEFT_CONTROL    &kp TAB    &kp ESCAPE    &mo 7                         &morph_comma               &kp K      &kp J     &kp X                  &kp Q                   &kp TAB
+&magic 8 0          &kp LEFT_WIN            &kp LEFT_ALT            &mo 5           &mo 6                            &trans      &kp H    &kp LEFT_SHIFT    &kp RIGHT_SHIFT          &kp R        &kp SPACE                                               &kp LEFT   &kp DOWN  &kp UP                 &kp RIGHT               &magic 8 0
 >;
 };
 layer1_qwerty {
@@ -339,7 +339,7 @@ bindings = <
       &trans  &rgb_ug RGB_SPI  &rgb_ug RGB_SAI  &rgb_ug RGB_HUI  &rgb_ug RGB_BRI  &rgb_ug RGB_TOG                                                         &none   &none   &none   &none   &none           &none
  &bootloader  &rgb_ug RGB_SPD  &rgb_ug RGB_SAD  &rgb_ug RGB_HUD  &rgb_ug RGB_BRD  &rgb_ug RGB_EFF                                                         &none   &none   &none   &none   &none     &bootloader
       &reset            &none            &none            &none            &none            &none   &bt_2   &bt_3         &none   &none   &none   &none   &none   &none   &none   &none   &none          &reset
-       &none            &none            &none            &none            &none                    &bt_0   &bt_1  &out OUT_USB   &none   &none   &none           &none   &none   &none   &none           &none
+       &none            &none            &none            &to 1            &to 0                    &bt_0   &bt_1  &out OUT_USB   &none   &none   &none           &to 0   &to 1   &none   &none           &none
             >;
         };
 
