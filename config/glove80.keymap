@@ -248,7 +248,7 @@ bindings = <
 &kp ESC             &kp SEMICOLON           &kp P                   &kp L           &kp C       &kp W                                                                                                                          &kp Z                      &kp U      &kp O     &kp Y                  &kp COLON               &kp DEL
 &kp BSPC            &kp R                   &kp N                   &kp T           &kp S       &kp F                                                                                                                          &morph_dot                 &kp A      &kp E     &kp I                  &kp H                   &kp ENTER
 &kp LA(BSPC)        &kp V                   &kp B                   &kp M           &kp D       &kp G                &kp LEFT_ALT   &kp LEFT_WIN    &kp LEFT_CONTROL    &kp TAB    &kp ESCAPE    &mo 7                         &morph_comma               &kp K      &kp J     &kp X                  &kp Q                   &kp TAB
-&magic 8 0          &kp LEFT_WIN            &kp LEFT_ALT            &mo 5           &mo 6                            &trans      &kp H    &kp LEFT_SHIFT    &kp RIGHT_SHIFT          &kp R        &kp SPACE                                               &kp LEFT   &kp DOWN  &kp UP                 &kp RIGHT               &magic 8 0
+&magic 8 0          &kp LEFT_WIN            &kp LEFT_ALT            &mo 5           &mo 6                            &trans      &kp R    &kp LEFT_SHIFT    &kp RIGHT_SHIFT          &kp H        &kp SPACE                                               &kp LEFT   &kp DOWN  &kp UP                 &kp RIGHT               &magic 8 0
 >;
 };
 layer1_qwerty {
