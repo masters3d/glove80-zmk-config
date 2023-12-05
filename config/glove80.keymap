@@ -298,10 +298,10 @@ layer4_Lower {
 layer5_keypad_symbol {
 bindings = <
 &trans  &trans  &trans  &trans  &trans                                                             &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans                                             &trans  &kp PERCENT  &kp CARET  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans                                             &trans  &kp DOLLAR   &kp AMPERSAND  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans                                             &trans  &kp POUND    &kp STAR  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &trans &trans &trans &trans &trans &trans  &trans  &kp AT_SIGN  &kp PIPE  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans                                             &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans                                             &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans                                             &trans  &kp PIPE     &kp STAR      &kp AMPERSAND &kp CARET  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans &trans &trans &trans &trans &trans  &trans  &kp AT_SIGN  &kp POUND     &kp DOLLAR    &kp PERCENT  &trans
 &trans  &trans  &trans  &trans  &trans          &trans &trans &trans &trans &trans &trans          &trans  &trans  &trans  &trans  &trans
 >;
 };
